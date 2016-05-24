@@ -1,5 +1,5 @@
 {
-  "name": "react-flex-carousel",
+  "name": "react-flex-slick-folked",
   "version": "0.5.0",
   "description": "Slick carousel using Flexbox",
   "main": "./lib/index.js",
