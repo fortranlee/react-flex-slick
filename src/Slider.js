@@ -145,7 +145,7 @@ class Slider extends Component {
 
   handleSwipeStart(e) {
     const { swipe, draggable, edgeEvent, swipeEvent, touchThreshold, vertical } = this.props;
-    if (swipe === false && (draggable === false && e.type.indexOf('mouse') === -1)) {
+    if (swipe === false && (draggable === false/* && e.type.indexOf('mouse') === -1*/)) {
       return;
     }
 
