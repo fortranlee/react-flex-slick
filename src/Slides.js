@@ -1,4 +1,5 @@
 import React, { Component, PropTypes, Children, cloneElement } from 'react';
+import cloneWithProps from 'react-addons-clone-with-props'
 
 class Page extends Component {
   static propTypes = {
@@ -145,18 +146,18 @@ class Track extends Component {
 
     const slides = Children.map(this.props.children, (child, i) =>
       <Page pageStyle={pageStyle} className={pageClass} >
-        {cloneElement(child, { key: i })}
+        {cloneWithProps(child, { ...child.props, key: i })}
       </Page>
     );
 
     const preSlides = slideCount === 1 || infinite === false ? null :
       <Page pageStyle={pageStyle} className={pageClass} pre >
-        {cloneElement(this.props.children[slideCount - 1], { key: -1 })}
+        {cloneWithProps(this.props.children[slideCount - 1], { ...this.props.children[slideCount - 1].props, key: -1 })}
       </Page>;
 
     const postSlides = slideCount === 1 || infinite === false ? null :
       <Page pageStyle={pageStyle} className={pageClass} post >
-        {cloneElement(this.props.children[0], { key: totalCount })}
+        {cloneWithProps(this.props.children[0], { ...this.props.children[0].props, key: totalCount })}
       </Page>;
 
     return (

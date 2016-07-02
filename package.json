@@ -1,6 +1,6 @@
 {
   "name": "react-flex-slick-folked",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "description": "Slick carousel using Flexbox",
   "main": "./lib/index.js",
   "scripts": {
@@ -40,6 +40,7 @@
     "eslint-plugin-react": "^3.4.2",
     "express": "^4.13.3",
     "react": "^0.14.0-rc1",
+    "react-addons-clone-with-props": "^0.14.8",
     "react-dom": "^0.14.0-rc1",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.0",
